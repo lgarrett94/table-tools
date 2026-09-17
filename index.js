@@ -6,7 +6,11 @@
  * @returns {boolean} whether the wizard can cast the spell
  */
 function canCastSpell(isSpellPrepared, hasScroll) {
-  // TODO
+  if (isSpellPrepared || hasScroll) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -17,7 +21,11 @@ function canCastSpell(isSpellPrepared, hasScroll) {
  * @returns {boolean} whether the creature is hidden from the observer
  */
 function isHidden(hiding, aware) {
-  // TODO
+  if (hidden || !aware) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -27,9 +35,7 @@ function isHidden(hiding, aware) {
  * @param {number} ac - the armor class to beat
  * @returns {boolean} whether the strike hits
  */
-function doesStrikeHit(attack, ac) {
-  // TODO
-}
+function doesStrikeHit(attack, ac) {}
 
 /**
  * A strike is a critical hit if the attack value is at least
