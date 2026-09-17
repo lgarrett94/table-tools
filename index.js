@@ -36,7 +36,10 @@ function isHidden(hiding, aware) {
  * @returns {boolean} whether the strike hits
  */
 function doesStrikeHit(attack, ac) {}
-
+const criticalHitNumber = ac + 10;
+if (attack >= criticalHitNumber) {
+  return true;
+}
 /**
  * A strike is a critical hit if the attack value is at least
  * 10 greater than the target's armor class (AC).
@@ -45,7 +48,12 @@ function doesStrikeHit(attack, ac) {}
  * @returns {boolean} whether the strike is a critical hit
  */
 function doesStrikeCrit(attack, ac) {
-  // TODO
+  const criticalHitnumber = ac + 10;
+  if (attack >= criticalCriticalHitNumber) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -57,8 +65,7 @@ function doesStrikeCrit(attack, ac) {
  * @returns {number} total hit points after healing
  */
 function heal(maxHp, currentHp, healAmount) {
-  // TODO
-}
+
 
 /**
  * When a character uses a skill they have proficiency in,
